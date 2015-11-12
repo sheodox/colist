@@ -1,8 +1,8 @@
 'use strict';
-let router = require('express').Router;
 
-router.get('/', (req, res, next) => {
+module.exports = (app, io) => {
 
-});
-
-module.exports = router;
+    app.get('/', (req, res, next) => {
+        res.render('index');
+    });
+};

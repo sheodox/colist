@@ -32,5 +32,14 @@ gulp.task('bundle', function() {
 });
 
 gulp.task('default', function(callback) {
-    runSequence('transform', 'bundle', 'sass', callback);
+    runSequence('transform', 'bundle', 'sass', 'copy', callback);
+});
+
+gulp.task('copy', function() {
+    gulp.src('src/views/**/*.jade')
+        .pipe(gulp.dest('dist/views'))
+});
+
+gulp.task('default:watch', function() {
+    gulp.watch('src/**/*.*', ['default']);
 });
