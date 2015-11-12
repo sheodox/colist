@@ -16,9 +16,9 @@ gulp.task('transform', function() {
 });
 
 gulp.task('sass', function () {
-    gulp.src('src/style/**/*.scss')
+    gulp.src('src/static/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('dist/style'));
+        .pipe(gulp.dest('dist/static'));
 });
 
 gulp.task('bundle', function() {
