@@ -22,10 +22,10 @@ gulp.task('sass', function () {
 });
 
 gulp.task('bundle', function() {
-    return gulp.src('dist/static/index.js')
+    return gulp.src('dist/static/main.js')
         .pipe(webpack({
             output: {
-                filename: 'index.js'
+                filename: 'main.js'
             }
         }))
         .pipe(gulp.dest('dist/static'));
